@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ubuntu', Arial, sans-serif; /* Use Ubuntu font as the primary font */
+    background-color: #f8f9fa; /* Light gray background */
 }
 
 .sidebar {
@@ -8,45 +9,49 @@ body {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #3894ef; /* Light blue background for sidebar */
+    background-color: rgb(69, 60, 141); /* Darker background color for sidebar in dark mode */
     padding-top: 20px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
 }
 
 .profile img {
     width: 150px;
     height: 150px;
     margin-bottom: 15px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid rgba(0, 0, 0, 0.2); /* Light black border */
 }
 
 .profile h2,
 .profile p {
-    color: #333; /* Default color */
+    color: #ffffff; /* White text color */
+    margin: 0; /* Remove default margin */
 }
 
 .nav-link {
-    color: #333;
+    color: #ffffff; /* White text color */
+    margin: 10px 0; /* Adjust margin */
 }
 
 .nav-link:hover {
     color: #007bff; /* Light blue color on hover */
 }
 
-.visitor-counter {
-    margin-top: 20px;
+.main-content {
+    margin-left: 250px; /* Adjust based on your sidebar width */
+    padding: 20px;
 }
 
-h2 {
-    margin-top: 60px;
+.section {
+    margin-bottom: 40px; /* Space between sections */
 }
 
-ul {
-    list-style-type: disc;
-    margin: 10px 0 10px 20px;
-}
-
-ul li {
-    margin: 5px 0;
+.section h2 {
+    border-bottom: 1px solid #ccc; /* Gray horizontal line under section headings */
+    padding-bottom: 5px;
 }
 
 @media (max-width: 768px) {
@@ -56,33 +61,24 @@ ul li {
         width: 100%;
         height: auto;
         padding: 20px 0;
-        display: none;
+        align-items: flex-start; /* Align items to the start for mobile */
     }
-    .sidebar .profile {
-        margin-bottom: 20px;
+    .profile img {
+        margin-bottom: 10px; /* Adjust spacing */
     }
     .sidebar .nav {
         flex-direction: column;
+        align-items: center; /* Center nav links vertically */
     }
     .sidebar .nav-link {
-        margin: 10px 0;
+        margin: 5px 0; /* Adjust margin for nav links */
     }
-    .navbar {
-        display: block;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 1;
-        background-color: #3894ef; /* Light blue background for navbar */
-    }
-    .navbar-brand {
-        flex-grow: 1;
-    }
-    .navbar-toggler {
-        margin-left: auto;
+    .visitor-counter {
+        margin-bottom: 10px; /* Reduce bottom margin */
     }
     .main-content {
-        padding-top: 60px;
+        margin-left: 0; /* Reset margin for mobile */
+        padding: 10px;
     }
 }
 
@@ -92,28 +88,24 @@ body.dark-mode {
 }
 
 body.dark-mode .sidebar {
-    background-color: #1f1f1f;
+    background-color: #333333; /* Darker background color for sidebar */
 }
 
 body.dark-mode .profile h2,
 body.dark-mode .profile p {
-    color: #000000; /* Black text color for profile section in dark mode */
+    color: #ffffff; /* White text color */
 }
 
 body.dark-mode .sidebar .nav-link {
-    color: #bbbbbb;
+    color: #bbbbbb; /* Light gray text color */
 }
 
 body.dark-mode .sidebar .nav-link:hover {
-    color: #ffffff;
-}
-
-body.dark-mode h2, body.dark-mode h3 {
-    color: #ffffff;
+    color: #ffffff; /* White text color on hover */
 }
 
 body.dark-mode .visitor-counter {
-    color: #bbbbbb;
+    color: #bbbbbb; /* Light gray text color */
 }
 
 /* Dark mode toggle button (optional) */
