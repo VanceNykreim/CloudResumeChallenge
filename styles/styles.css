@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.nav-link {
+    color: #333;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.visitor-counter {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 60px;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 10px 0 10px 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        top: 0;
+        transform: none;
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        display: none;
+    }
+    .sidebar .profile {
+        margin-bottom: 20px;
+    }
+    .sidebar .nav {
+        flex-direction: column;
+    }
+    .sidebar .nav-link {
+        margin: 10px 0;
+    }
+    .navbar {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    .navbar-brand {
+        flex-grow: 1;
+    }
+    .navbar-toggler {
+        margin-left: auto;
+    }
+    .main-content {
+        padding-top: 60px;
+    }
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .sidebar .nav-link {
+    color: #bbbbbb;
+}
+
+body.dark-mode .sidebar .nav-link:hover {
+    color: #ffffff;
+}
+
+body.dark-mode h2, body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .visitor-counter {
+    color: #bbbbbb;
+}
+
+/* Dark mode toggle button (optional) */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
