@@ -1,8 +1,12 @@
+/* Global styles */
 body {
     font-family: 'Ubuntu', Arial, sans-serif; /* Use Ubuntu font as the primary font */
     background-color: #f8f9fa; /* Light gray background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* Sidebar styles */
 .sidebar {
     height: 100vh;
     position: fixed;
@@ -15,8 +19,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items horizontally */
+    z-index: 100; /* Ensure sidebar is above other content */
 }
 
+/* Profile image styles */
 .profile img {
     width: 150px;
     height: 150px;
@@ -25,26 +31,31 @@ body {
     border: 3px solid rgba(0, 0, 0, 0.2); /* Light black border */
 }
 
+/* Profile text styles */
 .profile h2,
 .profile p {
     color: #ffffff; /* White text color */
     margin: 0; /* Remove default margin */
 }
 
+/* Navigation link styles */
 .nav-link {
     color: #ffffff; /* White text color */
     margin: 10px 0; /* Adjust margin */
+    text-decoration: none; /* Remove underline */
 }
 
 .nav-link:hover {
     color: #007bff; /* Light blue color on hover */
 }
 
+/* Main content styles */
 .main-content {
     margin-left: 250px; /* Adjust based on your sidebar width */
     padding: 20px;
 }
 
+/* Section styles */
 .section {
     margin-bottom: 40px; /* Space between sections */
 }
@@ -54,6 +65,7 @@ body {
     padding-bottom: 5px;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
     .sidebar {
         top: 0;
@@ -63,25 +75,27 @@ body {
         padding: 20px 0;
         align-items: flex-start; /* Align items to the start for mobile */
     }
+
     .profile img {
         margin-bottom: 10px; /* Adjust spacing */
     }
+
     .sidebar .nav {
         flex-direction: column;
         align-items: center; /* Center nav links vertically */
     }
+
     .sidebar .nav-link {
         margin: 5px 0; /* Adjust margin for nav links */
     }
-    .visitor-counter {
-        margin-bottom: 10px; /* Reduce bottom margin */
-    }
+
     .main-content {
         margin-left: 0; /* Reset margin for mobile */
         padding: 10px;
     }
 }
 
+/* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -108,7 +122,7 @@ body.dark-mode .visitor-counter {
     color: #bbbbbb; /* Light gray text color */
 }
 
-/* Dark mode toggle button (optional) */
+/* Dark mode toggle button */
 .dark-mode-toggle {
     position: fixed;
     bottom: 20px;
@@ -119,4 +133,5 @@ body.dark-mode .visitor-counter {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    z-index: 200; /* Ensure toggle button is above other content */
 }
