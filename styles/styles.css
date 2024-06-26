@@ -8,7 +8,7 @@ body {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #f8f9fa;
+    background-color: #3894ef; /* Light blue background for sidebar */
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -19,12 +19,17 @@ body {
     margin-bottom: 15px;
 }
 
+.profile h2,
+.profile p {
+    color: #333; /* Default color */
+}
+
 .nav-link {
     color: #333;
 }
 
 .nav-link:hover {
-    color: #007bff;
+    color: #007bff; /* Light blue color on hover */
 }
 
 .visitor-counter {
@@ -68,6 +73,7 @@ ul li {
         position: fixed;
         top: 0;
         z-index: 1;
+        background-color: #3894ef; /* Light blue background for navbar */
     }
     .navbar-brand {
         flex-grow: 1;
@@ -87,6 +93,11 @@ body.dark-mode {
 
 body.dark-mode .sidebar {
     background-color: #1f1f1f;
+}
+
+body.dark-mode .profile h2,
+body.dark-mode .profile p {
+    color: #000000; /* Black text color for profile section in dark mode */
 }
 
 body.dark-mode .sidebar .nav-link {
